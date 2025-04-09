@@ -45,11 +45,7 @@ do
                 assets = "Ethereal/Images",
                 configs = "Ethereal/Configs"
             },
-            shared = {
-                initialized = false,
-                fps = 0,
-                ping = 0
-            }
+           
         } 
         for i,v in pairs(library.folders) do
             makefolder(v)
@@ -144,7 +140,7 @@ do
                     frame.Size = Vector2.new(100,100)
                     frame.Position = Vector2.new(0,0)
                     frame.ZIndex = 50
-                    frame.Transparency = library.shared.initialized and 1 or 0
+                    frame.Transparency = 0
                     instance = frame
                 elseif instanceType == "TextLabel" or instanceType == "textlabel" then
                     local text = Drawing.new("Text")
@@ -154,7 +150,7 @@ do
                     text.Center = false
                     text.Color = Color3.fromRGB(255,255,255)
                     text.ZIndex = 50
-                    text.Transparency = library.shared.initialized and 1 or 0
+                    text.Transparency = 0
                     instance = text
                 elseif instanceType == "Triangle" or instanceType == "triangle" then
                     local frame = Drawing.new("Triangle")
@@ -163,7 +159,7 @@ do
                     frame.Thickness = 0
                     frame.Color = Color3.fromRGB(255,255,255)
                     frame.ZIndex = 50
-                    frame.Transparency = library.shared.initialized and 1 or 0
+                    frame.Transparency = 0
                     instance = frame
                 elseif instanceType == "Image" or instanceType == "image" then
                     local image = Drawing.new("Image")
@@ -171,7 +167,7 @@ do
                     image.Position = Vector2.new(0,0)
                     image.Visible = true
                     image.ZIndex = 50
-                    image.Transparency = library.shared.initialized and 1 or 0
+                    image.Transparency = 0
                     instance = image
                 elseif instanceType == "Circle" or instanceType == "circle" then
                     local circle = Drawing.new("Circle")
@@ -183,7 +179,7 @@ do
                     circle.Transparency = 1
                     circle.ZIndex = 50
                     circle.Radius = 50
-                    circle.Transparency = library.shared.initialized and 1 or 0
+                    circle.Transparency = 0
                     instance = circle
                 elseif instanceType == "Quad" or instanceType == "quad" then
                     local quad = Drawing.new("Quad")
@@ -193,7 +189,7 @@ do
                     quad.Transparency = 1
                     quad.ZIndex = 50
                     quad.Filled = false
-                    quad.Transparency = library.shared.initialized and 1 or 0
+                    quad.Transparency = 0
                     instance = quad
                 elseif instanceType == "Line" or instanceType == "line" then
                     local line = Drawing.new("Line")
@@ -203,7 +199,7 @@ do
                     line.Transparency = 1
                     line.Thickness = 1.5
                     line.ZIndex = 50
-                    line.Transparency = library.shared.initialized and 1 or 0
+                    line.Transparency = 0
                     instance = line
                 end
                 --
